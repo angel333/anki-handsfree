@@ -1,0 +1,19 @@
+build: false
+environment:
+  matrix:
+    - PYTHON: "C:/Python27"
+    - PYTHON: "C:/Python34"
+    - PYTHON: "C:/Python35"
+    - PYTHON: "C:/Python36"
+init:
+  - "ECHO %PYTHON%"
+  - ps: "ls C:/Python*"
+install:
+  - "%PYTHON%/python.exe -m pip install wheel"
+  - "%PYTHON%/python.exe -m pip install -e ."
+  # Install ffmpeg
+  - ps: Start-FileDownload ('https://ffmpeg.zeranoe.com/builds/win64/shared/ffmpeg-latest-win64-shared.zip') ffmpeg-shared.zip
+  - 7z x ffmpeg-shared.zip > NULL
+  - "SET PATH=%cd%\\ffmpeg-latest-win64-shared\\bin;%PATH%"
+test_script:
+  - "%PYTHON%/python.exe test/test.py"

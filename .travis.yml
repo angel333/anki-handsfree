@@ -1,0 +1,22 @@
+sudo: required
+dist: trusty
+language: python
+env:
+  - CONVERTER=ffmpeg
+  - CONVERTER="libav-tools libavcodec-extra-54"
+before_install:
+  - sudo add-apt-repository ppa:mc3man/trusty-media -y
+  - sudo apt-get update --fix-missing
+install:
+  - sudo apt-get install -y ${CONVERTER} libopus-dev
+python:
+  - "2.7"
+  - "3.3"
+  - "3.4"
+  - "3.5"
+  - "3.6"
+  - "pypy2.7-5.8.0"
+script:
+  - python test/test.py
+after_script:
+  - pip install pylama && python -m pylama -i W,E501 pydub/ || true

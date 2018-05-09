@@ -1,0 +1,18 @@
+{
+    "qa_delay": 5000,
+    "aq_delay": 2000,
+    "countdown": true,
+    "repeat": true,
+    "query": "deck:current",
+    "output_directory": "~\\Dropbox",
+    "output_format": "opus",
+    "output_bitrate": "32k",
+    "output_filename": "cards.opus",
+    "output_individual": false,
+    "output_individual_filename_pattern": "card_{:03d}.opus",
+    "audio_tags": {
+        "title": "Anki Handsfree Export",
+        "album": "Anki Handsfree",
+        "artist": "Anki Handsfree"
+    }
+}

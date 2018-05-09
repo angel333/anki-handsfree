@@ -18,7 +18,7 @@ I wrote Handsfree because I wanted to review my cards even at times when I can't
 
 ### Manual Installation
 
-Right now, Handsfree isn't as polished as some other Anki addons and requires some extra work. It shouldn't be too hard, though, and if you struggle with the process, feel free to ask in [Issues](https://github.com/angel333/handsfree/issues) or me directly.
+Right now, Handsfree isn't as polished as some other Anki addons and requires some extra work. It shouldn't be too hard, though, and if you struggle with the process, feel free to ask in [Issues](https://github.com/angel333/anki-handsfree/issues) or me directly.
 
 1. **Open your Anki addons folder**<br>
     Open Anki and in the top menu choose *Tools* &raquo; *Add-ons* &raquo; *Open Add-ons Folder...*.
